@@ -14,6 +14,10 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        manifestPlaceholders["redirectHostName"] = "callback"
+        manifestPlaceholders["redirectSchemeName"] = "miapp"
+        manifestPlaceholders["redirectPathPattern"] = ""
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -45,4 +49,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.spotify.android:auth:3.0.0")
+    implementation("com.adamratzman:spotify-remote-republish:1.1")
+    implementation("androidx.media3:media3-exoplayer:1.8.0")
+    implementation("androidx.media3:media3-ui:1.8.0")
+    implementation("androidx.paging:paging-runtime:3.3.6")
 }
